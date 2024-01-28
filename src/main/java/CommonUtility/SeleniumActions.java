@@ -1,11 +1,14 @@
 package CommonUtility;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.NoSuchElementException;
 import java.util.Random;
 import java.util.Set;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +26,7 @@ import Utility.ConfigPropReader;
 import Utility.MyListeners;
 
 public class SeleniumActions {
+	public Logger logger = LogManager.getLogger(this.getClass());
 	private static final int MAX_SCROLL_ATTEMPTS = 10;
 	WebDriver driver;
 
@@ -30,6 +34,7 @@ public class SeleniumActions {
 		this.driver = driver;
 	}
 
+	
 	public void scrollToElement(WebDriver driver, By locator, int yOffset) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, 0);");
@@ -368,20 +373,6 @@ public class SeleniumActions {
 		}
 	}
 
-	public void logs(String message) {
-		Date timestamp = new Date();
-		String formattedMessage = "[" + timestamp + "] " + message;
-		System.out.println(formattedMessage);
-	}
-	
-	public void log(String message) {
-		ExtentTest extentTest = MyListeners.extentTest.get();
-		if (extentTest != null) {
-			extentTest.log(Status.PASS, message);
-		}
-        System.out.println(message);
-	}
-
 	public static String generateRandomText(int length) {
 		return RandomStringUtils.randomAlphanumeric(length);
 	}
@@ -435,4 +426,23 @@ public class SeleniumActions {
 	}
 
 	
+
+	public void log(String message) {
+		logger.info(message);
+	}
+	
+	public void logs(String message) {
+		Date timestamp = new Date();
+		String formattedMessage = "[" + timestamp + "] " + message;
+		System.out.println(formattedMessage);
+	}
+
+	public void log1(String message) {
+		String timestamp = new SimpleDateFormat("h:mm:ss a").format(new Date());
+		ExtentTest extentTest = MyListeners.extentTest.get();
+		if (extentTest != null) {
+			extentTest.log(Status.PASS, message);
+		}
+		System.out.println("[" + timestamp + "] " + "INFO: " + message);
+	}
 }

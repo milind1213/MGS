@@ -25,7 +25,7 @@ public class MyListeners implements ITestListener, ISuiteListener {
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE '" + methodName.toUpperCase() + " ' PASSED" + "</b>";
+		String logText = "<b>" + "PASSED " + methodName.toUpperCase() + " TEST" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
 		extentTest.get().pass(m); // extentTest.get().log(Status.PASS, "Test Passed");
 	}

@@ -16,12 +16,12 @@ public class WebDriverUtils {
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
     protected static WebDriver driver;
     public WebDriver init_driver(String browser) {
-        System.out.println(" Browser value is : " + browser);
         boolean isHeadless = Boolean.parseBoolean(config.prop("Web").getProperty("headless"));
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             if (isHeadless) {
+            	System.out.println("Headless Browser Started");
                 options.addArguments("headless");
                 Map<String, Object> prefs = new HashMap<>();
                 prefs.put("autofill.profile_enabled", false);

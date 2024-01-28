@@ -1,0 +1,4 @@
+[23:31:10] INFO  TestCases.WebLogin - Chrome Browser Launched
+[23:31:14] INFO  TestCases.WebLogin - Navigated to: https://star-preprod.homeservice-react.star.nobroker.in/
+[23:31:22] INFO  Pages.LegalService - Clicking on Login Button
+[23:31:24] INFO  Pages.LegalService - Entering PhoneNumber '6650298321'into the PhoneNunumber inputfield 

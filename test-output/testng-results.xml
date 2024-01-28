@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-28T23:20:05 IST" name="Default suite" finished-at="2024-01-28T23:23:45 IST" duration-ms="219630">
+    <groups>
+    </groups>
+    <test started-at="2024-01-28T23:20:05 IST" name="Default test" finished-at="2024-01-28T23:23:45 IST" duration-ms="219630">
+      <class name="TestCases.WebLogin">
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:20:05 IST" name="loadConfigProp" finished-at="2024-01-28T23:20:05 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadConfigProp -->
+        <test-method signature="TC01_Verify_Instant_Verification_PKG_Functionality()[pri:1, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:20:05 IST" name="TC01_Verify_Instant_Verification_PKG_Functionality" finished-at="2024-01-28T23:21:44 IST" duration-ms="99345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_Verify_Instant_Verification_PKG_Functionality -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:21:45 IST" name="quitDriver" finished-at="2024-01-28T23:21:45 IST" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method signature="TC02_Verify_Basic_Verification_PKG_Functionality()[pri:2, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:21:45 IST" name="TC02_Verify_Basic_Verification_PKG_Functionality" finished-at="2024-01-28T23:23:45 IST" duration-ms="119987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Verify_Basic_Verification_PKG_Functionality -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:23:45 IST" name="quitDriver" finished-at="2024-01-28T23:23:45 IST" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+        <test-method is-config="true" signature="quitServer()[pri:0, instance:TestCases.WebLogin@9635fa]" started-at="2024-01-28T23:23:45 IST" name="quitServer" finished-at="2024-01-28T23:23:45 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitServer -->
+      </class> <!-- TestCases.WebLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -50,7 +50,7 @@ public class FixedDeposit extends BaseTest {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement clear_btn = driver.findElement(By.xpath("//img[@class='PL5']"));
 			js.executeScript("arguments[0].click();", clear_btn); // clicking on clear button
-			log("Clearing the Entered the Text");
+			log("Clearing the Entered the Text"); 
 		}
 
 	}
