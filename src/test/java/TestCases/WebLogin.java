@@ -9,7 +9,7 @@ import Utility.MyListeners;
 
 @Listeners(MyListeners.class)
 public class WebLogin extends BaseTest {
-	LegalService service;
+	private LegalService service;
 
 	@Test
 	public void webLogin() throws Exception {

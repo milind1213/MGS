@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 24 13:35:40 IST 2024</td>
+<td>Started on:</td><td>Sun Jan 28 11:53:04 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31276 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31708 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,16 +77,16 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='TestCases.WebLogin.webLogin()'><b>webLogin</b><br>Test class: TestCases.WebLogin</td>
-<td><div><pre>java.lang.AssertionError: Failed to click on element [By.id: signUpSubmit]
-	at CommonUtility.SeleniumActions.click(SeleniumActions.java:215)
-	at Pages.LegalService.loginSignUpMethod(LegalService.java:32)
+<td><div><pre>java.lang.AssertionError: Failed to send keys to element [By.xpath: //input[@id=&apos;email&apos; and  @name = &apos;email&apos;]d]
+	at CommonUtility.SeleniumActions.sendKeys(SeleniumActions.java:194)
+	at Pages.LegalService.loginSignUpMethod(LegalService.java:45)
 	at TestCases.WebLogin.webLogin(WebLogin.java:19)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1353512285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1353512285'><pre>java.lang.AssertionError: Failed to click on element [By.id: signUpSubmit]
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1540031691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1540031691'><pre>java.lang.AssertionError: Failed to send keys to element [By.xpath: //input[@id=&apos;email&apos; and  @name = &apos;email&apos;]d]
 	at org.testng.Assert.fail(Assert.java:111)
-	at CommonUtility.SeleniumActions.click(SeleniumActions.java:215)
-	at Pages.LegalService.loginSignUpMethod(LegalService.java:32)
+	at CommonUtility.SeleniumActions.sendKeys(SeleniumActions.java:194)
+	at Pages.LegalService.loginSignUpMethod(LegalService.java:45)
 	at TestCases.WebLogin.webLogin(WebLogin.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -117,8 +117,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>30</td>
-<td>TestCases.WebLogin@5ef5c734</td></tr>
+<td>31</td>
+<td>TestCases.WebLogin@1583741e</td></tr>
 </table><p>
 </body>
 </html>
