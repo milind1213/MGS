@@ -16,12 +16,12 @@ import org.testng.annotations.AfterMethod;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import CommonUtility.AppiumDriverUtils;
-import CommonUtility.WebDriverUtils;
+import CommonUtility.AndroidDrivers;
+import CommonUtility.WebBrowser;
 import Utility.MyListeners;
 import io.appium.java_client.android.AndroidDriver;
 
-public class BaseTest extends AppiumDriverUtils {
+public class BaseTest extends AndroidDrivers {
 	public Logger logger = LogManager.getLogger(this.getClass());
 
 	public void log(String message) {
@@ -41,7 +41,7 @@ public class BaseTest extends AppiumDriverUtils {
 	}
 
 	public WebDriver getWebDriver() {
-		driver = new WebDriverUtils().init_driver("chrome");
+		driver = new WebBrowser().init_driver("chrome");
 		log("Chrome Browser Launched");
 		currentDriver = Driver.WEB;
 		driver.get(WEB_URL);

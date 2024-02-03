@@ -4,21 +4,19 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import CommonUtility.AppiumDriverUtils;
+import CommonUtility.AndroidDrivers;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDateTime; 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TestUtil extends AppiumDriverUtils {
+public class TestUtil extends AndroidDrivers {
 	public static String screenshotName;
 
-	public static void captureScreenshot() throws IOException {
+	public static void captureScreenshot(String methodName) throws IOException {
 		File scrFile;
-		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM-dd-yyyy_hh:mm:ss_a");
-		screenshotName = now.format(formatter).replace(" ", "_") + ".jpg";
+		screenshotName = methodName + ".jpg";
 		switch (currentDriver) {
 		case ANDROID:
 			scrFile = ((TakesScreenshot) androidDriver).getScreenshotAs(OutputType.FILE);
@@ -29,6 +27,7 @@ public class TestUtil extends AppiumDriverUtils {
 		default:
 			throw new IllegalArgumentException("Invalid driver type");
 		}
+
 		FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir") + "//reports//" + screenshotName));
 		FileUtils.copyFile(scrFile, new File(".\\reports\\" + screenshotName));
 	}

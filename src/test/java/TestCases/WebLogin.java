@@ -4,20 +4,20 @@ package TestCases;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import Pages.LegalService;
+import Pages.LegalServicePage;
 import TestBase.BaseTest;
 import Utility.MyListeners;
 
 @Listeners(MyListeners.class)
 public class WebLogin extends BaseTest {
-	private LegalService service;
+	private LegalServicePage service;
 	@Test(priority=1)
-	public void TC01_Verify_Instant_Verification_PKG_Functionality() throws Exception {
-		service = new LegalService(getWebDriver());
+	public void TC01_Instant_TV_Package() throws Exception {
+		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
 		log("Successfully logged in with valid credentials.");
 		
-		service.selectHSServiceType("Painting & Cleaning");
+		service.selectHSServiceType("Painting & Cleaning");  
 		log("Clicking on 'Painting & Cleaning' Service");
 		
 		service.selectHSServiceCity("Bangalore");
@@ -42,8 +42,8 @@ public class WebLogin extends BaseTest {
 	}
 	
 	@Test(priority=2)
-	public void TC02_Verify_Basic_Verification_PKG_Functionality() throws Exception {
-		service = new LegalService(getWebDriver());
+	public void TC02_Basic_TV_Package() throws Exception {
+		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
 		log("Successfully logged in with valid credentials.");
 		
@@ -72,7 +72,71 @@ public class WebLogin extends BaseTest {
         Assert.assertEquals(summaryTitle,"Basic Verification");
 	}
 	
+	@Test(priority=3)
+	public void TC03_Standard_TV_Package() throws Exception {
+		service = new LegalServicePage(getWebDriver());
+		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
+		log("Successfully logged in with valid credentials.");
+		
+		service.selectHSServiceType("Painting & Cleaning");
+		log("Clicking on 'Painting & Cleaning' Service");
+		
+		service.selectHSServiceCity("Bangalore");
+		log("Selected 'Bangalore' City");
+		
+		service.selectTenantVerification("Tenant Verification");
+		log("Clicking on 'Tenant Verification' Package");
+		
+		service.closingChatHelp();
+		log("Minimising the 'Help' Pop Up"); 
+		
+		service.selectTenantVerificationPackage("Standard Verification");
+		log("Selecting the 'Standard Verification' Package");
+		
+		service.tenantBasicVerificationDetails("PAN Card","BREPG1234F","Shown","9876543210","11112000","John Doe");
+		log("Succfully Entered Tenant Verification Details ");
+		
+		service.verificationAddress("A-12011","HSR","560035");
+		log("Succfully Entered Verification 'Address' Details ");
+		
+
+		String summaryTitle = service.getTvPackageTitle();
+        Assert.assertEquals(summaryTitle,"Standard Verification");
+	}
 	
 	
+	@Test(priority=4)
+	public void TC04_Comprehensive_TV_Package() throws Exception {
+		service = new LegalServicePage(getWebDriver());
+		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
+		log("Successfully logged in with valid credentials.");
+		
+		service.selectHSServiceType("Painting & Cleaning");
+		log("Clicking on 'Painting & Cleaning' Service");
+		
+		service.selectHSServiceCity("Bangalore");
+		log("Selected 'Bangalore' City");
+		
+		service.selectTenantVerification("Tenant Verification");
+		log("Clicking on 'Tenant Verification' Package");
+		
+		service.closingChatHelp();
+		log("Minimising the 'Help' Pop Up"); 
+		
+		service.selectTenantVerificationPackage("Comprehensive Verification");
+		log("Selecting the 'Comprehensive Verification' Package");
+		
+		service.tenantBasicVerificationDetails("PAN Card","BREPG1234F","Shown","9876543210","11112000","John Doe");
+		log("Succfully Entered Tenant Verification Details ");
+		
+		service.verificationAddress("A-12011","HSR","560035");
+		log("Succfully Entered Verification 'Address' Details ");
+	
+        service.referenceName("John","8766773456","refrence@g.com");
+	    log("Succfully Entered Reference Details ");
+	    
+	    String summaryTitle = service.getTvPackageTitle();
+        Assert.assertEquals(summaryTitle,"Comprehensive Verification");
+	}
 	
 }

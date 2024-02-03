@@ -7,9 +7,9 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="[%d{HH:mm:ss}] %-5level %logger{34} - %msg%n" />
         </Console>
-        <RollingFile name="File" fileName="${basePath}/Application.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log" append="false">
+        <RollingFile name="File" fileName="${basePath}/Application.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log" append="true">
             <PatternLayout pattern="[%d{HH:mm:ss}] %-5level %logger{34} - %msg%n" />
-            <SizeBasedTriggeringPolicy size="5000" />
+            <SizeBasedTriggeringPolicy size="50000" />
         </RollingFile>
     </Appenders>
     <Loggers>

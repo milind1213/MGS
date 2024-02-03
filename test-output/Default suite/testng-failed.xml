@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.WebLogin">
+      <class name="TestCases.LoginTest">
         <methods>
-          <include name="TC01_Verify_Instant_Verification_PKG_Functionality"/>
-          <include name="loadConfigProp"/>
+          <include name="TC01_VerifyingLogin"/>
           <include name="quitDriver"/>
+          <include name="loadConfigProp"/>
           <include name="quitServer"/>
         </methods>
-      </class> <!-- TestCases.WebLogin -->
+      </class> <!-- TestCases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -25,11 +25,7 @@ public class ExcelWrite {
 		
 		row2.createCell(0).setCellValue("AAAA");
 		row2.createCell(1).setCellValue("BBBB");
-		row2.createCell(2).setCellValue("CCCC");
-		
-		row3.createCell(0).setCellValue("GGGGG");
-		row3.createCell(1).setCellValue("HHHHH");
-		row3.createCell(2).setCellValue("LLLLL");  */
+		row2.createCell(2).setCellValue("CCCC"); */
 		
 		Scanner sc = new Scanner(System.in);
 		for(int r=0;r<=4;r++){
