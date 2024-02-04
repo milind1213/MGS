@@ -1,4 +1,5 @@
 package CommonUtility;
+
 import org.openqa.selenium.By;
 import java.time.Duration;
 import java.util.Collections;
@@ -10,7 +11,9 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
@@ -44,12 +47,12 @@ public class CommonAppium {
 				.addAction(FINGER.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), start.getX(),
 						start.getY()))
 				.addAction(FINGER.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-				.addAction(new Pause(FINGER, Duration.ofMillis(200))) 
+				.addAction(new Pause(FINGER, Duration.ofMillis(200)))
 				.addAction(FINGER.createPointerMove(Duration.ofMillis(duration), PointerInput.Origin.viewport(),
 						end.getX(), end.getY()))
 				.addAction(FINGER.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 		driver.perform(Collections.singletonList(swipe));
-	} 
+	}
 
 	public void swipeDown(int numberOfTimes, AppiumDriver driver) {
 		for (int i = 0; i < numberOfTimes; i++) {
@@ -62,10 +65,10 @@ public class CommonAppium {
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
-				e.printStackTrace(); 
+				e.printStackTrace();
 			}
-		  } 
-     	}
+		}
+	}
 
 	public void switchToContext(String contextName) {
 		Set<String> contexts = driver.getContextHandles();
@@ -133,18 +136,18 @@ public class CommonAppium {
 
 	public void waitForWebElementToBeClickable(WebElement element, Duration seconds) {
 		try {
-			new WebDriverWait(driver, seconds).pollingEvery(Duration.ofMillis(250))
-					.until(ExpectedConditions.elementToBeClickable(element));
+			WebDriverWait wait = new WebDriverWait(driver, seconds);
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 		} catch (Exception e) {
 			e.printStackTrace();
-			Assert.fail("Failed to find element [" + element + "]..even waited for [" + seconds + "] ");
+			Assert.fail("Failed to click: [" + element + "]");
 		}
-	}
+	} 
 
-	public WebElement waitForWebElementToBeVisible(WebElement element, Duration seconds) {
+	public WebElement waitForElementToBeVisible(WebElement element, Duration seconds) {
 		return new WebDriverWait(driver, seconds).pollingEvery(Duration.ofMillis(250))
 				.until(ExpectedConditions.visibilityOf(element));
-	}
+	} 
 
 	public void waitForElementToAppear(WebElement ele, AppiumDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -200,6 +203,22 @@ public class CommonAppium {
 		}
 	}
 
+	public boolean isTextDisplayed(String text) {
+		wait(2);
+		boolean result = false;
+		try {
+			WebElement element = driver.findElement(By.xpath("//*[contains(text(), '" + text + "')]"));
+			if (element.isDisplayed()) {
+				wait(1);
+				result = true;
+			}
+		} catch (NoSuchElementException | TimeoutException ex) {
+			wait(1);
+			result = false;
+		}
+		return result;
+	}
+
 	public boolean isElementDisplayed(WebElement webelement) {
 		wait(2);
 		boolean result = false;
@@ -220,6 +239,25 @@ public class CommonAppium {
 			return webElement.isDisplayed();
 		} catch (org.openqa.selenium.NoSuchElementException | org.openqa.selenium.StaleElementReferenceException e) {
 			return false;
+		}
+	}
+
+	public boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
+	public void waitForWebElement(WebElement webElement, Duration i) {
+		try {
+			WebDriverWait webDriverWait = new WebDriverWait(driver, i);
+			webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
+		} catch (TimeoutException e) {
+			e.printStackTrace();
+			Assert.fail("Failed to find element [" + webElement + "] even after waiting for [" + i + "] seconds.");
 		}
 	}
 

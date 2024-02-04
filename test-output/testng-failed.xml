@@ -5,10 +5,12 @@
     <classes>
       <class name="TestCases.LoginTest">
         <methods>
-          <include name="TC01_VerifyingLogin"/>
+          <include name="TC02_Verifying_CancelationPolicy"/>
           <include name="quitDriver"/>
           <include name="loadConfigProp"/>
+          <include name="setUp"/>
           <include name="quitServer"/>
+          <include name="TC01_Bathroom_Cleaning_Flow"/>
         </methods>
       </class> <!-- TestCases.LoginTest -->
     </classes>

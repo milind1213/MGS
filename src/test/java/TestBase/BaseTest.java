@@ -49,13 +49,13 @@ public class BaseTest extends AndroidDrivers {
 		return driver;
 	}
 
-	@AfterMethod(alwaysRun = true)
+	@AfterClass(alwaysRun = true)
 	public void quitDriver() {
 		if (androidDriver != null) {
 			androidDriver.quit();
 			log("Application Closed");
 		}
-		if (driver != null) {
+		if (driver != null) { 
 			driver.quit();
 			log("WebBrowser Closed");
 		}
