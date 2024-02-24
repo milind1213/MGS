@@ -3,10 +3,10 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import CommonUtility.SeleniumActions;
+import CommonUtility.CommonSelenium;
 
-public class FixedDepositPage extends SeleniumActions {
-	WebDriver driver;
+public class FixedDepositPage extends CommonSelenium {
+	public WebDriver driver;
 
 	public FixedDepositPage(WebDriver driver) {
 		super(driver);

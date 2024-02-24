@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DataDriven.FixedDeposit">
+      <class name="TestCases.LoginTest">
         <methods>
+          <include name="TC02_Verifying_CancelationPolicy"/>
           <include name="quitDriver"/>
           <include name="loadConfigProp"/>
-          <include name="fixedDepositInterestCalculation"/>
+          <include name="setUp"/>
           <include name="quitServer"/>
+          <include name="TC01_Bathroom_Cleaning_Flow"/>
         </methods>
-      </class> <!-- DataDriven.FixedDeposit -->
+      </class> <!-- TestCases.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

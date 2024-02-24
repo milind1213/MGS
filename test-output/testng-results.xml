@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-28T10:32:37 IST" name="Default suite" finished-at="2024-01-28T10:34:06 IST" duration-ms="89024">
+  <suite started-at="2024-02-04T19:49:07 IST" name="Default suite" finished-at="2024-02-04T19:55:02 IST" duration-ms="355355">
     <groups>
     </groups>
-    <test started-at="2024-01-28T10:32:37 IST" name="Default test" finished-at="2024-01-28T10:34:06 IST" duration-ms="89024">
-      <class name="DataDriven.FixedDeposit">
-        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:DataDriven.FixedDeposit@4c1909a3]" started-at="2024-01-28T10:32:37 IST" name="loadConfigProp" finished-at="2024-01-28T10:32:37 IST" duration-ms="15" status="PASS">
+    <test started-at="2024-02-04T19:49:07 IST" name="Default test" finished-at="2024-02-04T19:55:02 IST" duration-ms="355355">
+      <class name="TestCases.LoginTest">
+        <test-method is-config="true" signature="loadConfigProp()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:49:07 IST" name="loadConfigProp" finished-at="2024-02-04T19:49:07 IST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfigProp -->
-        <test-method signature="fixedDepositInterestCalculation()[pri:0, instance:DataDriven.FixedDeposit@4c1909a3]" started-at="2024-01-28T10:32:37 IST" name="fixedDepositInterestCalculation" finished-at="2024-01-28T10:34:06 IST" duration-ms="88704" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:49:07 IST" name="setUp" finished-at="2024-02-04T19:49:16 IST" duration-ms="9358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="TC01_Bathroom_Cleaning_Flow()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:49:16 IST" name="TC01_Bathroom_Cleaning_Flow" finished-at="2024-02-04T19:55:01 IST" duration-ms="344733" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot locate option with text: 
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '11.0.21'
-Driver info: driver.version: unknown]]>
+              <![CDATA[Failed to click: [Located by By.chained({By.xpath: //android.widget.TextView[@text="Add New Address"]})]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with text: 
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.17.0', revision: 'e52b1be057*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-91-generic', java.version: '11.0.21'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
-at CommonUtility.SeleniumActions.selectDropdownOptionByText(SeleniumActions.java:57)
-at Pages.FixedDepositPage.calculateFixedDeposit(FixedDepositPage.java:34)
-at DataDriven.FixedDeposit.fixedDepositInterestCalculation(FixedDeposit.java:36)
+              <![CDATA[java.lang.AssertionError: Failed to click: [Located by By.chained({By.xpath: //android.widget.TextView[@text="Add New Address"]})]
+at org.testng.Assert.fail(Assert.java:111)
+at CommonUtility.CommonAppium.waitForWebElementToBeClickable(CommonAppium.java:143)
+at Pages.ResidentHomePage.addingNewServiceAddress(ResidentHomePage.java:311)
+at TestCases.LoginTest.TC01_Bathroom_Cleaning_Flow(LoginTest.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,19 +56,53 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fixedDepositInterestCalculation -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:DataDriven.FixedDeposit@4c1909a3]" started-at="2024-01-28T10:34:06 IST" name="quitDriver" finished-at="2024-01-28T10:34:06 IST" duration-ms="94" status="PASS">
+        </test-method> <!-- TC01_Bathroom_Cleaning_Flow -->
+        <test-method signature="TC02_Verifying_CancelationPolicy()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:55:02 IST" name="TC02_Verifying_CancelationPolicy" finished-at="2024-02-04T19:55:02 IST" depends-on-methods="TestCases.LoginTest.TC01_Bathroom_Cleaning_Flow" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestCases.LoginTest.TC02_Verifying_CancelationPolicy() on instance TestCases.LoginTest@5f2606b depends on not successfully finished methods 
+[TestCases.LoginTest.TC01_Bathroom_Cleaning_Flow() on instance TestCases.LoginTest@5f2606b]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestCases.LoginTest.TC02_Verifying_CancelationPolicy() on instance TestCases.LoginTest@5f2606b depends on not successfully finished methods 
+[TestCases.LoginTest.TC01_Bathroom_Cleaning_Flow() on instance TestCases.LoginTest@5f2606b]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_Verifying_CancelationPolicy -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:55:02 IST" name="quitDriver" finished-at="2024-02-04T19:55:02 IST" duration-ms="527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
-        <test-method is-config="true" signature="quitServer()[pri:0, instance:DataDriven.FixedDeposit@4c1909a3]" started-at="2024-01-28T10:34:06 IST" name="quitServer" finished-at="2024-01-28T10:34:06 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="quitServer()[pri:0, instance:TestCases.LoginTest@5f2606b]" started-at="2024-02-04T19:55:02 IST" name="quitServer" finished-at="2024-02-04T19:55:02 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitServer -->
-      </class> <!-- DataDriven.FixedDeposit -->
+      </class> <!-- TestCases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

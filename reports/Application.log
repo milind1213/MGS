@@ -1,0 +1,161 @@
+[15:57:13] INFO  TestCases.LoginTest - Successfully Added Service Address
+[15:57:13] INFO  Pages.ResidentHomePage - Clicking on Service 'Date' Options
+[15:57:26] INFO  Pages.ResidentHomePage - Selecting Service Slot 
+[15:57:38] INFO  Pages.ResidentHomePage - Clicking On 'Proceed' Button
+[15:57:38] INFO  TestCases.LoginTest - Successfully Selectecd Service Date & Slot
+[15:58:03] INFO  Pages.ResidentHomePage - NB Discount Element Not Appeared
+[15:58:13] INFO  TestCases.LoginTest - Varifed Applied Discount[0] with Actual Discount[48]
+[15:58:14] INFO  TestCases.LoginTest - Varified Actual GST[149] with Expetected[148]
+[15:58:24] INFO  TestCases.LoginTest - Varified Actual Payeble[971] with Expetected[971]
+[15:58:25] INFO  TestCases.LoginTest - Application Closed
+[16:10:09] INFO  TestCases.LoginTest - Appium Server Started
+[16:10:16] INFO  TestCases.LoginTest - Launched Application
+[16:10:17] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[16:11:25] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[16:11:36] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[16:11:40] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[16:13:04] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[16:13:08] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[16:13:44] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catlogue Page
+[16:13:57] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[16:15:06] INFO  TestCases.LoginTest - Application Closed
+[16:30:22] INFO  TestCases.LoginTest - Appium Server Started
+[16:30:29] INFO  TestCases.LoginTest - Launched Application
+[16:30:30] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[16:31:51] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[16:32:00] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[16:32:04] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[16:33:34] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[16:33:38] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[16:34:14] INFO  Pages.ResidentHomePage - Verified Included Service Element
+[16:34:14] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catlogue Page
+[16:34:27] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[16:42:57] INFO  TestCases.LoginTest - Appium Server Started
+[16:43:28] INFO  TestCases.LoginTest - Appium Server Started
+[16:44:11] INFO  TestCases.LoginTest - Appium Server Started
+[16:44:20] INFO  TestCases.LoginTest - Launched Application
+[16:44:21] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[16:45:22] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[16:45:35] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[16:45:37] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[16:47:06] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[16:47:10] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[16:47:44] INFO  Pages.ResidentHomePage - Clicking on 'ADD' Button 
+[16:47:59] INFO  Pages.ResidentHomePage - Clicking on Number of '2 Bathrooms' And Proceeding Button
+[16:48:12] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Service Addons
+[16:48:25] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalog Page
+[16:48:38] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[16:49:14] INFO  Pages.ResidentHomePage - Clicking on 'Add New Address'
+[16:49:53] INFO  Pages.ResidentHomePage - Entering Address in Searchbar 'HSR Layout'
+[16:49:53] INFO  Pages.ResidentHomePage - Selecting Auto-Suggest Address from Options
+[16:49:55] INFO  Pages.ResidentHomePage - Confirming locality 
+[16:50:30] INFO  Pages.ResidentHomePage - Entering House Number 'A-123'
+[16:51:03] INFO  Pages.ResidentHomePage - Entering Society Name as 'Bren Mercury'
+[16:51:03] INFO  Pages.ResidentHomePage - Selecting Address tag as 'Home'
+[16:51:04] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button
+[16:51:08] INFO  Pages.ResidentHomePage - Clicking on Choose an Address 'Done' Button
+[16:51:20] INFO  TestCases.LoginTest - Successfully Added Service Address
+[16:51:20] INFO  Pages.ResidentHomePage - Clicking on Service 'Date' Options
+[16:51:32] INFO  Pages.ResidentHomePage - Selecting Service Slot 
+[16:51:45] INFO  Pages.ResidentHomePage - Clicking On 'Proceed' Button
+[16:51:45] INFO  TestCases.LoginTest - Successfully Selectecd Service Date & Slot
+[16:52:10] INFO  Pages.ResidentHomePage - NB Discount Element Not Appeared
+[16:52:20] INFO  TestCases.LoginTest - Varifed Applied Discount[0] with Actual Discount[0] or [48]
+[16:52:20] INFO  TestCases.LoginTest - Varified Actual GST[149] with Expetected[148]
+[16:52:30] INFO  Pages.ResidentHomePage - Applied discount element not found. Returning 0.
+[16:52:30] INFO  TestCases.LoginTest - Varified Actual Payeble[971] with Expetected[971]
+[16:52:31] INFO  TestCases.LoginTest - Application Closed
+[16:54:45] INFO  TestCases.LoginTest - Appium Server Started
+[16:54:52] INFO  TestCases.LoginTest - Launched Application
+[16:54:53] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[16:55:51] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[16:56:00] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[16:56:04] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[16:57:27] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[16:57:30] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[16:57:54] INFO  Pages.ResidentHomePage - Verified Included Service Element
+[16:57:54] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalog Page
+[16:58:07] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[16:59:04] INFO  TestCases.LoginTest - Application Closed
+[17:08:57] INFO  TestCases.LoginTest - Appium Server Started
+[17:09:05] INFO  TestCases.LoginTest - Launched Application
+[17:09:06] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[17:10:27] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[17:10:32] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[17:10:36] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[17:11:56] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[17:12:00] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[17:12:24] INFO  Pages.ResidentHomePage - Verified Included Service Element
+[17:12:24] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalog Page
+[17:12:37] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[17:17:53] INFO  TestCases.LoginTest - Appium Server Started
+[17:19:16] INFO  TestCases.LoginTest - Appium Server Started
+[17:19:25] INFO  TestCases.LoginTest - Launched Application
+[17:19:26] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[17:20:27] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[17:20:35] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[17:20:37] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[17:22:12] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[17:22:16] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[17:22:51] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalogue Page
+[17:23:04] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[17:24:40] INFO  TestCases.LoginTest - Appium Server Started
+[17:24:48] INFO  TestCases.LoginTest - Launched Application
+[17:24:49] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[18:09:42] INFO  TestCases.LoginTest - Appium Server Started
+[18:09:50] INFO  TestCases.LoginTest - Launched Application
+[18:09:51] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[18:10:54] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[18:11:03] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[18:11:07] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[18:12:51] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[18:12:55] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[18:13:30] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalogue Page
+[18:13:43] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[18:27:01] INFO  TestCases.LoginTest - Appium Server Started
+[18:27:10] INFO  TestCases.LoginTest - Launched Application
+[18:27:11] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[18:28:10] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[18:28:19] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[18:28:22] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[18:30:01] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[18:30:05] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[18:30:50] INFO  Pages.ResidentHomePage - Clicking on 'ADD' Button 
+[18:31:05] INFO  Pages.ResidentHomePage - Clicking on Number of'2 Bathrooms'And'Proceed' Button
+[18:31:17] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalogue Page
+[18:31:30] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[18:32:27] INFO  TestCases.LoginTest - Application Closed
+[18:33:33] INFO  TestCases.LoginTest - Appium Server Started
+[18:33:40] INFO  TestCases.LoginTest - Launched Application
+[18:33:41] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[18:34:32] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[18:34:43] INFO  TestCases.LoginTest - Application Closed
+[19:42:57] INFO  TestCases.LoginTest - Appium Server Started
+[19:43:04] INFO  TestCases.LoginTest - Launched Application
+[19:43:06] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[19:44:09] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[19:44:19] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[19:44:24] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[19:45:47] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[19:45:51] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[19:46:36] INFO  Pages.ResidentHomePage - Clicking on 'ADD' Button 
+[19:46:53] INFO  Pages.ResidentHomePage - Clicking on Number of'2 Bathrooms'And'Proceed' Button
+[19:47:06] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalogue Page
+[19:47:19] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[19:48:15] INFO  TestCases.LoginTest - Application Closed
+[19:49:07] INFO  TestCases.LoginTest - Appium Server Started
+[19:49:15] INFO  TestCases.LoginTest - Launched Application
+[19:49:16] INFO  TestCases.LoginTest - clicking on 'Get Started' Button
+[19:50:44] INFO  TestCases.LoginTest - Successfully Logged in with Email'p1@g.com'And Password'nobroker'
+[19:50:54] INFO  TestCases.LoginTest - Clicked on 'Exlore'Menu
+[19:50:58] INFO  TestCases.LoginTest - Clicked on 'Home Services'
+[19:52:35] INFO  TestCases.LoginTest - Clicked on 'Bathroom Cleaning Service'HS Service
+[19:52:39] INFO  Pages.ResidentHomePage - Scrolling Down till Element
+[19:53:24] INFO  Pages.ResidentHomePage - Clicking on 'ADD' Button 
+[19:53:40] INFO  Pages.ResidentHomePage - Clicking on Number of'2 Bathrooms'And'Proceed' Button
+[19:53:52] INFO  Pages.ResidentHomePage - Clicking on 'Proceed' Button from Catalogue Page
+[19:54:06] INFO  TestCases.LoginTest - Successfully Added 2 Premium Bathroom Cleaning Service to Cart
+[19:55:02] INFO  TestCases.LoginTest - Application Closed
+[20:01:37] INFO  TestCases.LoginTest - Appium Server Started
+[20:01:45] INFO  TestCases.LoginTest - Launched Application
+[20:01:47] INFO  TestCases.LoginTest - clicking on 'Get Started' Button

@@ -1,4 +1,5 @@
 package Utility;
+
 import java.io.IOException;
 import java.util.Arrays;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -24,8 +25,8 @@ public class MyListeners implements ITestListener, ISuiteListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		String methodName = result.getMethod().getMethodName();
-		String logText = "<b>" + "TEST CASE '" + methodName.toUpperCase() + " ' PASSED" + "</b>";
+		String methodName = result.getMethod().getMethodName(); 
+		String logText = "<b>" + "TEST CASE '" + methodName.toUpperCase() + "' PASSED" + "</b>";
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
 		extentTest.get().pass(m); // extentTest.get().log(Status.PASS, "Test Passed");
 	}
@@ -34,18 +35,29 @@ public class MyListeners implements ITestListener, ISuiteListener {
 	public void onTestFailure(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		String excepionMessage = Arrays.toString(result.getThrowable().getStackTrace());
+		try {
+<<<<<<< HEAD
+			ScreenshotUtils.captureScreenshot();
+=======
+			TestUtil.captureScreenshot(methodName);
+>>>>>>> d7a565b385971a3cae9a0411183dbd7c78c8e9c8
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		extentTest.get()
 				.fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception Occured: Click to View"
 						+ "</font>" + "</b >" + "</summary>" + excepionMessage.replaceAll(",", "<br>") + "</details>"
 						+ " \n");
-		try {
-			ScreenshotUtils.captureScreenshot();
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
+
 		extentTest.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of Failure" + "</font>" + "</b>",
+<<<<<<< HEAD
 				MediaEntityBuilder.createScreenCaptureFromPath(ScreenshotUtils.screenshotName).build());
 		String failureLogg = "<b>" + "FAILED ' " + methodName.toUpperCase() + " ' TEST CASE" + "</b>";
+=======
+				MediaEntityBuilder.createScreenCaptureFromPath(TestUtil.screenshotName).build());
+
+		String failureLogg = "TEST CASE FAILED";
+>>>>>>> d7a565b385971a3cae9a0411183dbd7c78c8e9c8
 		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
 		extentTest.get().log(Status.FAIL, m);
 	}
