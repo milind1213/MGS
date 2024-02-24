@@ -10,20 +10,18 @@ import Utility.MyListeners;
 
 @Listeners(MyListeners.class)
 public class WebLogin extends BaseTest {
-<<<<<<< HEAD
-	private LegalService service;
+	private LegalServicePage service;
 	@Test
 	public void webLogin() throws Exception {
 		log("User landed on Home Page");
-		service = new LegalService(getWebDriver());
+		service = new LegalServicePage(getWebDriver());
 		log("Navigated to the Page");
 		service.loginSignUpMethod("7072856499", "9999", "sdfsfs", "sfsddmilind.com");
 		log("Successfully logged in with Number, OTP, name, and password");
 		Thread.sleep(5000);
-=======
-	private LegalServicePage service;
-	@Test(priority=1)
-	public void TC01_Instant_TV_Package() throws Exception {
+	}
+
+	public void  TC01_Instant_TV_Package() throws Exception {
 		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
 		log("Successfully logged in with valid credentials.");
@@ -51,8 +49,7 @@ public class WebLogin extends BaseTest {
 		String summaryTitle = service.getTvPackageTitle();
         Assert.assertEquals(summaryTitle,"Instant Verification");
 	}
-	
-	@Test(priority=2)
+
 	public void TC02_Basic_TV_Package() throws Exception {
 		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
@@ -82,8 +79,7 @@ public class WebLogin extends BaseTest {
 		String summaryTitle = service.getTvPackageTitle();
         Assert.assertEquals(summaryTitle,"Basic Verification");
 	}
-	
-	@Test(priority=3)
+
 	public void TC03_Standard_TV_Package() throws Exception {
 		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
@@ -112,11 +108,10 @@ public class WebLogin extends BaseTest {
 		
 
 		String summaryTitle = service.getTvPackageTitle();
-        Assert.assertEquals(summaryTitle,"Standard Verification");
-	}
+        Assert.assertEquals(summaryTitle,"Standard Verification");}
 	
 	
-	@Test(priority=4)
+
 	public void TC04_Comprehensive_TV_Package() throws Exception {
 		service = new LegalServicePage(getWebDriver());
 		service.loginSignUpMethod(randomMobileNumber(),"9999",randomName(),randomEmail());
@@ -148,7 +143,5 @@ public class WebLogin extends BaseTest {
 	    
 	    String summaryTitle = service.getTvPackageTitle();
         Assert.assertEquals(summaryTitle,"Comprehensive Verification");
->>>>>>> d7a565b385971a3cae9a0411183dbd7c78c8e9c8
 	}
-	
 }
