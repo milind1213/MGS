@@ -39,12 +39,12 @@ public class MyListeners implements ITestListener, ISuiteListener {
 						+ "</font>" + "</b >" + "</summary>" + excepionMessage.replaceAll(",", "<br>") + "</details>"
 						+ " \n");
 		try {
-			TestUtil.captureScreenshot();
+			ScreenshotUtils.captureScreenshot();
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 		extentTest.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of Failure" + "</font>" + "</b>",
-				MediaEntityBuilder.createScreenCaptureFromPath(TestUtil.screenshotName).build());
+				MediaEntityBuilder.createScreenCaptureFromPath(ScreenshotUtils.screenshotName).build());
 		String failureLogg = "<b>" + "FAILED ' " + methodName.toUpperCase() + " ' TEST CASE" + "</b>";
 		Markup m = MarkupHelper.createLabel(failureLogg, ExtentColor.RED);
 		extentTest.get().log(Status.FAIL, m);

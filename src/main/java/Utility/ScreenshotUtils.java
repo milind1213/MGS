@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.time.LocalDateTime; 
 import java.time.format.DateTimeFormatter;
 
-public class TestUtil extends AppiumDriverUtils {
+public class ScreenshotUtils extends AppiumDriverUtils {
 	public static String screenshotName;
 
 	public static void captureScreenshot() throws IOException {

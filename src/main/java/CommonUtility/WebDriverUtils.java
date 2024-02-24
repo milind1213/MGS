@@ -19,7 +19,6 @@ public class WebDriverUtils {
         System.out.println(" Browser value is : " + browser);
         boolean isHeadless = Boolean.parseBoolean(config.prop("Web").getProperty("headless"));
         if (browser.equals("chrome")) {
-            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             if (isHeadless) {
                 options.addArguments("headless");
